@@ -1,0 +1,18 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+
+# Python
+__pycache__/
+*.pyc
+
+# Data and trained adapters (large; synced outside git)
+data/
+models/
+unsloth_compiled_cache/
+.unsloth_cache/
+
+# Slurm logs
+code/SBATCH/logs/
