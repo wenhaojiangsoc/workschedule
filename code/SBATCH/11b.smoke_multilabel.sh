@@ -15,7 +15,7 @@
 # Changes from that version, all environmental:
 #   partition h200ea -> scavenger-h200 (h200ea is not visible to this account;
 #                       scavenger-h200 has 9 nodes of 8x H200, 192 cores, 2 TB)
-#   account dctrl-as1676 -> scavenger-h200 (the only account this partition accepts)
+#   account wenhaolab -> scavenger-h200 (the only account this partition accepts)
 #   --nodes=1 added so the 5 GPUs land on ONE node (the loop pins one GPU per fold
 #                       with CUDA_VISIBLE_DEVICES, which only works within a node)
 #   mem 640G -> 500G   (comfortably under the node's 2 TB and faster to schedule)

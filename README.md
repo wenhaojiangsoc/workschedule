@@ -100,6 +100,18 @@ See `docs/METHODS.md` for the measurement design and how to read the evaluations
 Data, model adapters and figures are not in the repository. Scripts expect
 `data/trainingfinal/` beside `code/`.
 
+## Cluster configuration
+
+Every launcher is set for one Duke DCC login: project root
+`/hpc/group/wenhaolab/projects/corporate-control`, the cluster Anaconda with a `qwen-ft`
+environment, and `HF_HOME` on the group cache where the model is already downloaded.
+
+Account and partition must be paired. `scavenger-h200` is faster per card but caps this
+login at 2 concurrent GPUs and 24h per job; `scavenger-gpu` under the `wenhaolab` account
+has no GPU cap and 7 days, on smaller cards. `run_everything.sh` targets the latter.
+
+Change those six values and the pipeline moves to another cluster.
+
 ## Known gaps
 
 - `SBATCH/16.ensemble_label.sh` calls `code/16.ensemble_label.py`, which is not in the
